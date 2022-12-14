@@ -1,4 +1,4 @@
-<?php include_once 'includes/header.php' ?>
+<?php include VIEW . 'includes/header.php'?>
 	<!-- hero section -->
     <section class="home contact">
         <div class="text">
@@ -54,7 +54,7 @@
 		</div>
 		<div class="img-accordion">
 			<div class="contact-img">
-				<img src="../assets/img/contact-img.jpg" alt="mountain view from south east morocco with Tavigo logo on it">
+				<img src="../img/contact-img.jpg" alt="mountain view from south east morocco with Tavigo logo on it">
 			</div>
 			<div class="contact-accordion">
 				<div class="acc-item">
@@ -81,5 +81,4 @@
 			</div>
 		</div>
 	</section>
-
-<?php include_once 'includes/footer.php' ?>
+<?php include VIEW . 'includes/footer.php'?>

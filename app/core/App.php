@@ -1,59 +1,31 @@
 <?php
-   class App{
-      
-    private $controler="homeController";
-    private $method="index";
-    private $parameters=[];
+    class App {
+        protected $controller = 'homeController';
+        protected $method = 'index';
+        protected $params = [];
 
-    public function __construct(){      
-         $this->getUrl();
-         $this->render(); 
-    }
-
-    public function __destruct(){
-
-    }
-
-    private function getUrl(){
-
-          $url= $_SERVER['REQUEST_URI'];
-
-          if(!empty($url)){
-
-              $url=trim($url,"/");
-              $url=explode("/",$url);
-
-              // define a controler
-              $this->controler = !empty($url[1]) ? $url[1]."Controller" : "homeController" ;
-
-              // define a method
-              $this->method = !empty($url[2]) ? $url[2] : "index" ;
-
-              //  define parameters
-              unset($url[0], $url[1], $url[2]);
-              $this->parameters = !empty($url) ? array_values($url) : [] ;
-          
-          }
-
-    }
-
-
-
-    private function render(){
-
-        if(class_exists($this->controler)){
-          $controler = new $this->controler;
-
-          if(method_exists($this->controler,$this->method)){
-              call_user_func_array([$controler,$this->method],$this->parameters);
-          }else{
-              echo 'this method '.$this->method.' not exist';
-          }
+        public function __construct()
+        {
+            // echo $_SERVER["REQUEST_URI"] . '<br>';
+            $this->parseURL();
+            if(file_exists(CONTROLLER . $this->controller . '.php')) {
+                $this->controller = new $this->controller;
+                if(method_exists($this->controller, $this->method)) {
+                    call_user_func_array([$this->controller, $this->method], $this->params);
+                }
+            }
         }
-        else{
-          echo 'this class '.$this->controler.' not exist';
+        public function parseURL() {
+            $request = trim($_SERVER['REQUEST_URI'], '/');
+            if(!empty($request)) {
+                $url = explode('/', $request);
+                $this->controller = isset($url[2]) ? $url[2] . 'Controller' : 'homeController';
+                $this->method = isset($url[3]) ? $url[3] : 'index';
+                unset($url[0],$url[1],$url[2], $url[3]);
+                $this->params = !empty($url) ? array_values($url) : [];
+                // echo $this->controller . '<br>';
+                // echo $this->method . '<br>';
+                // print_r($this->params) . '<br>';
+            }
         }
-
     }
-  }
-?>

@@ -1,6 +1,5 @@
-
-<?php include_once 'includes/header.php' ?>
-	<!--Home section--->
+<?php include VIEW . 'includes/header.php'?>
+<!--Home section--->
 	<section class="home" id="home">
 		<div class="home-text">
 			<h1>Travigo <br> Travel</h1>
@@ -18,7 +17,7 @@
 		<div class="row-items">
 			<div class="container-box">
 				<div class="container-img">
-					<img src="../../public/img/trip1.png">
+					<img src="../img/trip1.png">
 				</div>
 				<h4>Ship Cruises</h4>
 				<p>150 Properties</p>
@@ -26,7 +25,7 @@
 
 			<div class="container-box">
 				<div class="container-img">
-					<img src="../../public/img/trip2.png">
+					<img src="../img/trip2.png">
 				</div>
 				<h4>Food Tours</h4>
 				<p>150 Properties</p>
@@ -34,7 +33,7 @@
 
 			<div class="container-box">
 				<div class="container-img">
-					<img src="../../public/img/trip3.png">
+					<img src="../img/trip3.png">
 				</div>
 				<h4>Summer Rest</h4>
 				<p>150 Properties</p>
@@ -52,7 +51,7 @@
 		<div class="package-content">
 			<div class="box">
 				<div class="thum">
-					<img src="../../public/img/img1.png">
+					<img src="../img/img1.png">
 					<h3>$499</h3>
 				</div>
 
@@ -73,7 +72,7 @@
 
 			<div class="box">
 				<div class="thum">
-					<img src="../../public/img/img2.png">
+					<img src="../img/img2.png">
 					<h3>$499</h3>
 				</div>
 
@@ -94,7 +93,7 @@
 
 			<div class="box">
 				<div class="thum">
-					<img src="../../public/img/img3.png">
+					<img src="../img/img3.png">
 					<h3>$499</h3>
 				</div>
 
@@ -124,37 +123,37 @@
 
 		<div class="destination-content">
 			<div class="col-content">
-				<img src="../../public/img/img-1.jpg">
+				<img src="../img/img-1.jpg">
 				<h5>Machu Picchu</h5>
 				<p>PERU</p>
 			</div>
 
 			<div class="col-content">
-				<img src="../../public/img/img-2.jpg">
+				<img src="../img/img-2.jpg">
 				<h5>Machu Picchu</h5>
 				<p>PERU</p>
 			</div>
 
 			<div class="col-content">
-				<img src="../../public/img/img-3.jpg">
+				<img src="../img/img-3.jpg">
 				<h5>Machu Picchu</h5>
 				<p>PERU</p>
 			</div>
 
 			<div class="col-content">
-				<img src="../../public/img/img-4.jpg">
+				<img src="../img/img-4.jpg">
 				<h5>Machu Picchu</h5>
 				<p>PERU</p>
 			</div>
 
 			<div class="col-content">
-				<img src="../../public/img/img-5.jpg">
+				<img src="../img/img-5.jpg">
 				<h5>Machu Picchu</h5>
 				<p>PERU</p>
 			</div>
 
 			<div class="col-content">
-				<img src="../../public/img/img-6.jpg">
+				<img src="../img/img-6.jpg">
 				<h5>Machu Picchu</h5>
 				<p>PERU</p>
 			</div>
@@ -176,4 +175,4 @@
 			</form>
 		</div>
 	</section>
-	<?php include_once 'includes/footer.php' ?>
+	<?php include VIEW . 'includes/footer.php'?>

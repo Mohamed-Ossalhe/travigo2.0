@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,9 @@
 	<meta name="description" content="Trivago - a Travel Agency that make you fall in love with the world, by providing awesome planning tours to outstanding world distinations.">
 	<meta name="keywords" content="travel agency online travel agent tours world explore traveling travel honeymoon beaches summer">
 	<title>Travigo - Travel for everyone</title>
+	<!-- core style -->
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- temp styles -->
 	<link rel="stylesheet" type="text/css" href="../css/temp.css">
 
 	<link rel="stylesheet"
@@ -27,10 +30,15 @@
 		<div class="bx bx-menu" id="menu-icon"></div>
 
 		<ul class="navbar">
-			<li><a href="/mvc-app/home/">Home</a></li>
-			<li><a href="/mvc-app/home/tours">Tours</a></li>
-			<li><a href="/mvc-app/home/about">About</a></li>
-			<li><a href="/mvc-app/home/contact">Contact Us</a></li>
-			<li><a href="/mvc-app/admin/login">Log in</a></li>
+			<li><a href="../home/index">Home</a></li>
+			<li><a href="../home/tours">Tours</a></li>
+			<li><a href="../home/about">About</a></li>
+			<li><a href="../home/contact">Contact Us</a></li>
+			<li><?php if(isset($_SESSION["logged"])){?>
+					<a href="../admin/dashboard">Dashboard</a>
+				<?php }else {?>
+					<a href="../admin/">Log in</a>
+				<?php }?>
+			</li>
 		</ul>
 	</header>

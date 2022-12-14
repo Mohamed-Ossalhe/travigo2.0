@@ -1,4 +1,4 @@
-<?php include_once 'includes/header.php' ?>
+<?php include VIEW . 'includes/header.php'?>
     <!-- hero section -->
     <section class="home tours">
         <div class="text">
@@ -33,12 +33,12 @@
 						</div>
 					</form>
 				</div>
-				<img src="../assets/img/travigo-gif.gif" alt="Travigo Logo Animated Gif" width="100%">
+				<img src="./img/travigo-gif.gif" alt="Travigo Logo Animated Gif" width="100%">
 			</div>
 			<div class="column-2">
 				<!-- tour -->
 				<div class="tour-box">
-					<img src="../assets/img/tours/1.jpg" alt="Picture of Satorini City in Greece" width="100%">
+					<img src="./img/tours/1.jpg" alt="Picture of Satorini City in Greece" width="100%">
 					<div class="box-text">
 						<h3>Santorini</h3>
 						<p class="description">
@@ -65,7 +65,7 @@
 				</div>
 				<!-- tour -->
 				<div class="tour-box">
-					<img src="../assets/img/tours/2.jpg" alt="Picture of Bordeaux, Nouvelle-Aquitaine City in France" width="100%">
+					<img src="./img/tours/2.jpg" alt="Picture of Bordeaux, Nouvelle-Aquitaine City in France" width="100%">
 					<div class="box-text">
 						<h3>Bordeaux, Nouvelle-Aquitaine</h3>
 						<p class="description">
@@ -92,7 +92,7 @@
 				</div>
 				<!-- tour -->
 				<div class="tour-box">
-					<img src="../assets/img/tours/3.jpg" alt="Picture of Maldives" width="100%">
+					<img src="./img/tours/3.jpg" alt="Picture of Maldives" width="100%">
 					<div class="box-text">
 						<h3>Maldives</h3>
 						<p class="description">
@@ -119,7 +119,7 @@
 				</div>
 				<!-- tour -->
 				<div class="tour-box">
-					<img src="../assets/img/tours/4.jpg" alt="Picture of The Dades Gorges, Boumalne Dades City in Morocco" width="100%">
+					<img src="./img/tours/4.jpg" alt="Picture of The Dades Gorges, Boumalne Dades City in Morocco" width="100%">
 					<div class="box-text">
 						<h3>The Dades Gorges, Boumalne Dades</h3>
 						<p class="description">
@@ -154,5 +154,4 @@
 			<a href="#"><i class="bx bxs-chevron-right"></i></a>
 		</div>
     </section>
-
-<?php include_once 'includes/footer.php' ?>
+<?php include VIEW . 'includes/footer.php'?>

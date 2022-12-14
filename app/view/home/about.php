@@ -1,4 +1,4 @@
-<?php include_once 'includes/header.php' ?>
+<?php include VIEW . 'includes/header.php'?>
 	<!--Home section--->
 	<section class="home" id="home">
 		<div class="home-text">
@@ -21,7 +21,7 @@
 				<p>Founded in 2005 by three university friends in Düsseldorf (Germany), trivago has since become a leading global accommodation search website. We are focused on reshaping the way millions of travelers search for and compare hotels and other accommodations. Part of Expedia Group (NASDAQ: TRVG), trivago’s mission is to become your companion to experience our world. </p>
 			</div>
 			<div class="container-img-b">
-				<img src="../assets/img/tourism.jpg">
+				<img src="../img/tourism.jpg">
 			</div>
 
 		</div>
@@ -31,7 +31,7 @@
 	<section class="container">
 		<div class="row-items">
 			<div class="container-img-b">
-				<img src="../assets/img/maroc.jpg">
+				<img src="../img/maroc.jpg">
 			</div>
 			<div class="container-box">
 				<p>we organize perfect trips all over Morocco.
@@ -65,19 +65,19 @@
 
 		<div class="destination-content">
 			<div class="blog-content">
-				<img src="../assets/img/img-1.jpg">
+				<img src="../img/img-1.jpg">
 				<h5>Careers at trivago</h5>
 				<p>Find out more about our open roles, working culture, benefits, D&I approach and how we recruit.</p>
 			</div>
 
 			<div class="blog-content">
-				<img src="../assets/img/img-2.jpg">
+				<img src="../img/img-2.jpg">
 				<h5>Tech blog</h5>
 				<p>Get insight into our projects, prototypes and tech stack from our developers!</p>
 			</div>
 
 			<div class="blog-content">
-				<img src="../assets/img/img-3.jpg">
+				<img src="../img/img-3.jpg">
 				<h5>trivago blog</h5>
 				<p>A central source of actionable insights into hotel marketing, technology, and trends.</p>
 			</div>
@@ -99,5 +99,4 @@
 			</form>
 		</div>
 	</section>
-
-<?php include_once 'includes/footer.php' ?>
+<?php include VIEW . 'includes/footer.php'?>
