@@ -33,117 +33,37 @@
 						</div>
 					</form>
 				</div>
-				<img src="./img/travigo-gif.gif" alt="Travigo Logo Animated Gif" width="100%">
+				<img src="../img/travigo-gif.gif" alt="Travigo Logo Animated Gif" width="100%">
 			</div>
 			<div class="column-2">
+				<?php foreach($this->view_data as $data){?>
 				<!-- tour -->
 				<div class="tour-box">
-					<img src="./img/tours/1.jpg" alt="Picture of Satorini City in Greece" width="100%">
+					<img src="http://localhost/new-mvc-oop/public/img/tours/<?= $data["tour_image"]?>" alt="Picture of The Dades Gorges, Boumalne Dades City in Morocco" width="100%">
 					<div class="box-text">
-						<h3>Santorini</h3>
+						<h3><?=$data["tour_name"]?></h3>
 						<p class="description">
-							Santorini is a volcanic island in the Cyclades group of the Greek islands. It is located between Ios and Anafi islands. It is famous for dramatic views, stunning sunsets from Oia town, the strange white aubergine (eggplant), the town of Thira, and naturally its very own active volcano.
+							<?=$data["tour_description"]?>
 						</p>
 						<div class="tour-box-footer">
 							<div class="tour-info">
 								<div class="country">
 									<i class='bx bxs-flag-alt'></i>
-									Greece
+									<?=$data["tour_destination"]?>
 								</div>
 								<div class="duration">
 									<i class='bx bxs-time'></i>
-									5 Days, 4 Nights
+									<?=$data["tour_duration"]?>
 								</div>
-								<div class="price">
 									<i class='bx bxs-dollar-circle'></i>
-									$5,000
+									$<?=$data["tour_price"]?>
 								</div>
 							</div>
 							<button>More Details<i class="bx bxs-chevron-right"></i></button>
 						</div>
 					</div>
 				</div>
-				<!-- tour -->
-				<div class="tour-box">
-					<img src="./img/tours/2.jpg" alt="Picture of Bordeaux, Nouvelle-Aquitaine City in France" width="100%">
-					<div class="box-text">
-						<h3>Bordeaux, Nouvelle-Aquitaine</h3>
-						<p class="description">
-							Bordeaux, hub of the famed wine-growing region, is a port city on the Garonne River in southwestern France. It’s known for its Gothic Cathédrale Saint-André, 18th- to 19th-century mansions and notable art museums such as the Musée des Beaux-Arts de Bordeaux.
-						</p>
-						<div class="tour-box-footer">
-							<div class="tour-info">
-								<div class="country">
-									<i class='bx bxs-flag-alt'></i>
-									France
-								</div>
-								<div class="duration">
-									<i class='bx bxs-time'></i>
-									4 Days, 3 Nights
-								</div>
-								<div class="price">
-									<i class='bx bxs-dollar-circle'></i>
-									$8,000
-								</div>
-							</div>
-							<button>More Details<i class="bx bxs-chevron-right"></i></button>
-						</div>
-					</div>
-				</div>
-				<!-- tour -->
-				<div class="tour-box">
-					<img src="./img/tours/3.jpg" alt="Picture of Maldives" width="100%">
-					<div class="box-text">
-						<h3>Maldives</h3>
-						<p class="description">
-							The Maldives consists of 1,190 islands located in the Indian Ocean, southwest of India. They offer seclusion, breathtaking ocean views, and the most luxurious overwater villas in the World. Amazing scuba diving, snorkeling, and surfing help make the Maldives a unique and fantastic beach destination.
-						</p>
-						<div class="tour-box-footer">
-							<div class="tour-info">
-								<div class="country">
-									<i class='bx bxs-flag-alt'></i>
-									Maldives
-								</div>
-								<div class="duration">
-									<i class='bx bxs-time'></i>
-									5 Days, 4 Nights
-								</div>
-								<div class="price">
-									<i class='bx bxs-dollar-circle'></i>
-									$5,000
-								</div>
-							</div>
-							<button>More Details<i class="bx bxs-chevron-right"></i></button>
-						</div>
-					</div>
-				</div>
-				<!-- tour -->
-				<div class="tour-box">
-					<img src="./img/tours/4.jpg" alt="Picture of The Dades Gorges, Boumalne Dades City in Morocco" width="100%">
-					<div class="box-text">
-						<h3>The Dades Gorges, Boumalne Dades</h3>
-						<p class="description">
-							Daily trips are organized to discover these landscapes, located about 35 km to the north, between the center of Boumalne Dades and its outskirts. 10 km from Boumalne Dades to Ait Sdrat, one can run across an area known as the “monkeys’ fingers.”...
-						</p>
-						<div class="tour-box-footer">
-							<div class="tour-info">
-								<div class="country">
-									<i class='bx bxs-flag-alt'></i>
-									Maroc
-								</div>
-								<div class="duration">
-									<i class='bx bxs-time'></i>
-									4 Days, 3 Nights
-								</div>
-								<div class="price">
-									<i class='bx bxs-dollar-circle'></i>
-									$8,000
-								</div>
-							</div>
-							<button>More Details<i class="bx bxs-chevron-right"></i></button>
-						</div>
-					</div>
-				</div>
+				<?php }?>
 			</div>
         </div>
 		<div class="pages">

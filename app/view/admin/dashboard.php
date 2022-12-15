@@ -22,7 +22,7 @@
         </div>
     </header>
     <div class="main-content">
-        <div class="lg:container md:container md:mx-auto sm:container sm:mx-auto lg:mx-auto text-white px-5">
+        <div class="lg:container md:container md:mx-auto sm:container sm:mx-auto lg:mx-auto text-white px-5 pb-7">
             <!-- cards -->
             <header class="content-header py-7">
                 <!-- start cards -->
@@ -45,6 +45,7 @@
                 </div>
             </header>
             <!-- crud table -->
+            <div class="overflow-x-scroll w-92">
             <table class="w-full text-left text-black table-auto border">
                 <thead class="bg-violet-400">
                     <tr class="divide-x">
@@ -66,10 +67,10 @@
                         <tr class="border-b-2 divide-x">
                             <td class="p-2 text-center"><?=$data["tour_id"]?></td>
                             <td class="p-2">
-                                <img src="../../../public/img/tours/<?=$data["tour_image"]?>" alt="image" class="max-h-20">
+                                <img src="<?= url_umg.$data["tour_image"]?>" alt="image" class="max-h-20">
                             </td>
                             <td class="p-2"><?=$data["tour_name"]?></td>
-                            <td class="p-2"><?=$data["tour_description"]?></td>
+                            <td class="p-2 w-30 overfolw-x-auto"><div class="whitespace-nowrap"><?=$data["tour_description"]?></div></td>
                             <td class="p-2"><?=$data["tour_duration"]?></td>
                             <td class="p-2 text-center"><?=$data["tour_price"]?></td>
                             <td class="p-2 text-center"><?=$data["tour_status"]?></td>
@@ -85,6 +86,7 @@
                     ?>
                 </tbody>
             </table>
+            </div>
             <div class="buttons text-right my-3">
                 <a href="../admin/addTour/" class="add-tour">
                     <button class="bg-indigo-800 text-white mt-4 py-2 px-4 rounded focus:outline-none focus:ring hover:bg-indigo-500 transition-colors"><i class='bx bx-plus mr-2'></i>Add New Tour</button>

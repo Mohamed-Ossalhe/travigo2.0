@@ -23,9 +23,6 @@
             $this->view->render();
         }
         // admin update tour page
-        // public function updateTour($id) {
-            
-        // }
         
         // admin login page process
         public function Login() {
@@ -56,9 +53,7 @@
         }
         // admin logout process
         public function Logout() {
-            unset($_SESSION["logged"]);
-            unset($_SESSION["username"]);
-            if(!$_SESSION["logged"]) {
+            if(session_unset()) {
                 header('location: http://localhost/new-mvc-oop/public/admin/');
             }
         }
@@ -81,7 +76,8 @@
                 $price = $this->validateInput($_POST["price"]);
                 $description = $this->validateInput($_POST["description"]);
                 $duratoin = $this->validateInput($_POST["duratoin"]);
-                $image = $_FILES["image"]["name"];
+                $image = $_FILES["image"];
+                // $old_path = $_FILES["image"]["tmp_name"];
                 $status = $this->validateInput($_POST["status"]);
                 $data = array(
                     "name" => $name,
@@ -93,16 +89,16 @@
                     "status" => $status
                 );
                 $this->model('Tour');
-                if($this->model->insertData($data)) {
-                    header('location: http://localhost/new-mvc-oop/public/admin/dashboard');
-                    return;
-                }
-                header('location: http://localhost/new-mvc-oop/public/admin/addTour');
+                $this->model->insertData($data);
+                header('location:http://localhost/new-mvc-oop/public/admin/dashboard');
+                // }
+                // header('location: http://localhost/new-mvc-oop/public/admin/addTour');
             }
         }
         // *update tour
         public function modifyTour($id) {
-            $this->view('admin/update-Tour');
+            $this->model('Tour');
+            $this->view('admin/update-Tour', $this->displayTourRow($id));
             $this->view->render();
             if(isset($_POST["submit"]) and $_SESSION["logged"] === true) {
                 $name = $this->validateInput($_POST["name"]);
@@ -123,18 +119,21 @@
                     "id" => $id
                 );
                 // print_r($data);
-                $this->model('Tour');
-                if($this->model->updateData($data)) {
-                    header('location: http://localhost/new-mvc-oop/public/admin/dashboard');
-                    return;
-                }
-                // header('location: http://localhost/new-mvc-oop/public/admin/update-Tour');
+                // $this->model('Tour');
+                $this->model->updateData($data);
+                header('location: http://localhost/new-mvc-oop/public/admin/dashboard');
+                // header('location: http://localhost/new-mvc-oop/public/admin/dashboard');
             }
         }
         // *display
         public function displayAllTours() {
             $this->model('Tour');
             return $this->model->displayAllData();
+        }
+        // *display one row
+        public function displayTourRow($id) {
+            $this->model('Tour');
+            return $this->model->displayRowData($id);
         }
         // *delete
         public function deleteTour($id) {

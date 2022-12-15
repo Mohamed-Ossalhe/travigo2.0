@@ -13,11 +13,11 @@
 <body>
     <div class="relative flex justify-center items-center lg:container lg:mx-auto md:container md:mx-auto sm:container sm:mx-auto w-full h-screen bg-violet-800">
         <div class="card px-5 py-4 bg-white rounded w-2/5">
-            <?php echo $this->view_data["error"]?>
             <header class="text-center flex justify-between items-center mb-8">
                 <h1 class="font-semibold text-lg">Admin Log in</h1>
                 <a href="../home/"><button class="py-1 px-2 focus:outline-none focus:ring ring-red-100 rounded text-red-400"><i class='bx bx-exit pr-2' ></i>Cancel</button></a>
             </header>
+            <p><?php echo $this->view_data["error"]?></p>
             <form class="py-2" action="http://localhost/new-mvc-oop/public/admin/login" method="POST">
                 <label class="block w-full mb-2">
                     <span class="block text-sm font-medium text-slate-700 mb-2">Username</span>
