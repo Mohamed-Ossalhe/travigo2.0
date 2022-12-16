@@ -15,7 +15,7 @@
         <div class="card px-5 py-4 bg-white rounded w-4/5">
             <header class="text-center flex justify-between items-center mb-8">
                 <h1 class="font-semibold text-lg">Add New Tour</h1>
-                <a href="../"><button class="py-1 px-2 focus:outline-none focus:ring ring-red-100 rounded text-red-400"><i class='bx bx-exit pr-2' ></i>Cancel</button></a>
+                <a href="../dashboard"><button class="py-1 px-2 focus:outline-none focus:ring ring-red-100 rounded text-red-400"><i class='bx bx-exit pr-2' ></i>Cancel</button></a>
             </header>
             <div class="add-tour-form">
                 <form class="grid md:grid-cols-3 gap-y-4 gap-x-7" action="http://localhost/new-mvc-oop/public/admin/insertTour" method="POST" enctype="multipart/form-data">

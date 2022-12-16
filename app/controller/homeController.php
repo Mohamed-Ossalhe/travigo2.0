@@ -13,7 +13,8 @@ class homeController extends Controller {
     }
     // tours page
     public function tours() {
-        $this->view('home/tours');
+        $this->model('Tour');
+        $this->view('home/tours', $this->model->displayAllData());
         $this->view->render();
     }
     // contact page

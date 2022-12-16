@@ -109,6 +109,7 @@
     outline: 2px solid var(--main-color);
 }
 .tours-section .tours-grid .column-2 .tour-box img {
+    height: 250px;
     border-radius: 5px 5px 0 0;
 }
 .tours-section .tours-grid .column-2 .tour-box .box-text {
@@ -124,6 +125,8 @@
 .tours-section .tours-grid .column-2 .tour-box .box-text p {
     color: var(--second-color);
     font-size: var(--p-font);
+    inline-size: 40rem;
+    overflow-wrap: break-word;
 }
 .tours-section .tours-grid .column-2 .tour-box .box-text .tour-box-footer {
     display: flex;

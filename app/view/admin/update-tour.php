@@ -15,25 +15,25 @@
         <div class="card px-5 py-4 bg-white rounded w-4/5">
             <header class="text-center flex justify-between items-center mb-8">
                 <h1 class="font-semibold text-lg">Update Tour</h1>
-                <a href="../"><button class="py-1 px-2 focus:outline-none focus:ring ring-red-100 rounded text-red-400"><i class='bx bx-exit pr-2' ></i>Cancel</button></a>
+                <a href="../dashboard"><button class="py-1 px-2 focus:outline-none focus:ring ring-red-100 rounded text-red-400"><i class='bx bx-exit pr-2' ></i>Cancel</button></a>
             </header>
             <div class="add-tour-form">
                 <form class="grid md:grid-cols-3 gap-y-4 gap-x-7" method="POST" enctype="multipart/form-data">
                     <label class="block w-full">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Name</span>
-                        <input type="text" name="name" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.Paris, Safi" required/>
+                        <input type="text" name="name" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.Paris, Safi" value="<?=$this->view_data["tour_name"]?>" required/>
                     </label>
                     <label class="block w-full">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Destination</span>
-                        <input type="text" name="destination" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.Greece, Morocco" required/>
+                        <input type="text" name="destination" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.Greece, Morocco" value="<?=$this->view_data["tour_destination"]?>" required/>
                     </label>
                     <label class="block w-full">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Price</span>
-                        <input type="number" name="price" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.$100" required/>
+                        <input type="number" name="price" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.$100" value="<?=$this->view_data["tour_price"]?>" required/>
                     </label>
                     <label class="block w-full col-span-full">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Description</span>
-                        <textarea name="description" id="description" class="peer w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" cols="30" rows="5" placeholder="Ex:.Description" required></textarea>
+                        <textarea name="description" id="description" class="peer w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" cols="30" rows="5" placeholder="Ex:.Description" required><?=$this->view_data["tour_description"]?></textarea>
                     </label>
                     <label class="block col-span-1">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Image</span>
@@ -43,15 +43,15 @@
                             file:text-sm file:font-semibold
                             file:bg-violet-50 file:text-violet-700
                             hover:file:bg-violet-100
-                        " required/>
+                        " value="<?=$this->view_data["tour_image"]?>"/>
                     </label>
                     <label class="block w-full col-span-1">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Duration</span>
-                        <input type="text" name="duratoin" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.5 Days, 4 Nights" required/>
+                        <input type="text" name="duratoin" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" placeholder="Ex:.5 Days, 4 Nights" value="<?=$this->view_data["tour_duration"]?>" required/>
                     </label>
                     <label class="block col-span-1">
                         <span class="block text-sm font-medium text-slate-700 mb-2">Tour Status</span>
-                        <select name="status" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" name="status" id="status" required>
+                        <select name="status" class="peer h-9 w-full pl-2 py-1 border border-violet-200 rounded focus:outline-none focus:ring ring-violet-300" name="status" id="status" value="<?=$this->view_data["tour_status"]?>" required>
                             <option class="px-4 py-1 hover:bg-violet-400 border-b" value="active">Active</option>
                             <option class="px-4 py-1 hover:bg-violet-400 border-b" value="unactive">unActive</option>
                         </select>
