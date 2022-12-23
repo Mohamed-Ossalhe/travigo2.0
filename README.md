@@ -7,10 +7,10 @@
 
 **UML Conception**:
 * *UML Class Diagramme:*
-    - ***https://lucid.app/lucidchart/70162fe0-d7f8-4597-81dd-8a5663994f41/view?viewport_loc=80%2C-65%2C2106%2C1051%2C0_0&invitationId=inv_e806e34b-4ce2-4830-82cd-185925c803b3***.
+    - ***<a href="./Travigo Class Diagramme.pdf" download>Travigo Class Diagramme (PDF)</a>***.
 
 * *UML Use Case Diagramme*:
-    - ***https://lucid.app/lucidchart/2a4730f7-b308-4824-8161-411308aeb626/view?viewport_loc=0%2C-56%2C2562%2C1279%2C0_0&invitationId=inv_3d1c1bc9-00d7-4ca6-8c5d-dc35c514c6d1***.
+    - ***<a href="./Travigo Use Case diagram.pdf" download>Travigo UseCase Diagramme (PDF)</a>***.
 
 
 **Team:**
